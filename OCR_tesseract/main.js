@@ -29,13 +29,15 @@ var app = new Vue({
             }        
         },
         onMouseEnter:function($event) {
+            resultData = "mouseEnter";
+
             var img = document.getElementsByClassName("img");
             Tesseract.recognize(img[0])
             .then(function(result){
 //                        alert(result);
+                console.log(result);
                 resultData = result;
             })
-            resultData = "mouseEnter";
 
         }
 
