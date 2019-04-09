@@ -19,8 +19,9 @@ var app = new Vue({
                     .then(function(result){
 //                        alert(result);
                         console.log(result)
-                        this.resultData = result.text;
+                        this.resultData = result.text;                 
                     })
+                    
     
                 };
                 reader.readAsDataURL(file);
