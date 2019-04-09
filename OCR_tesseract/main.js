@@ -19,7 +19,7 @@ var app = new Vue({
                     .then(function(result){
 //                        alert(result);
                         console.log(result)
-                        this.resultData = result.text;                 
+                        setResultData(result.text);
                     })
                     
     
@@ -30,18 +30,18 @@ var app = new Vue({
             }        
         },
         onMouseEnter:function($event) {
-            this.resultData = "mouseEnter";
 
             var img = document.getElementsByClassName("img");
             Tesseract.recognize(img[0])
             .then(function(result){
 //                        alert(result);
                 console.log(result);
-                this.resultData = result.text;
+                setResultData(result.text);
+
             })
-
-            this.resultData = "mouseEnter";
-
+        },
+        setResultData:function(value) {
+            this.resultData = value;
         }
 
     },
