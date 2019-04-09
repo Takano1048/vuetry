@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet"
+</head>
+<body>
+    <div id="app" >
+            <input type="file" ref="file" v-on:change="onChange"><br><br>
+            <img v-bind:src="image" accept="image/*" style="border: solid 1px" class="img" v-on:mouseenter="onMouseEnter">
+            <br>
+            ▪️読み込み結果
+            <div name="result" style="border: solid 1px">
+                {{resultData}}
+            </div>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="main.js"></script>
+    <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>    
+</body>
+</html>
