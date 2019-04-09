@@ -38,6 +38,9 @@ var app = new Vue({
                 console.log(result);
                 resultData = result;
             })
+
+            resultData = "mouseEnter";
+
         }
 
     },
