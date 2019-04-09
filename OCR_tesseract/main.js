@@ -19,7 +19,7 @@ var app = new Vue({
                     .then(function(result){
 //                        alert(result);
                         console.log(result)
-                        this.resultData = result;
+                        $data.resultData = result;
                     })
     
                 };
@@ -33,7 +33,7 @@ var app = new Vue({
             Tesseract.recognize(img[0])
             .then(function(result){
 //                        alert(result);
-                this.resultData = result;
+                $data.resultData = result;
             })
 
 
