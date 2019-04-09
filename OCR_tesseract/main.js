@@ -6,6 +6,9 @@ var app = new Vue({
         resultData: "結果がここに表示されます。"
     },
     methods: {
+        setResultData:function($value) {
+            this.resultData = $value;
+        },
         onChange:function($event) {
             const files = $event.target.files;
             if (files.length > 0) {
@@ -39,9 +42,6 @@ var app = new Vue({
                 setResultData(result.text);
 
             })
-        },
-        setResultData:function(value) {
-            this.resultData = value;
         }
 
     },
