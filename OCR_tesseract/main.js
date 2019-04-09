@@ -19,12 +19,12 @@ var app = new Vue({
                     .then(function(result){
 //                        alert(result);
                         console.log(result)
-                        $data.resultData = result;
+                        resultData = result;
                     })
     
                 };
                 reader.readAsDataURL(file);
-
+                
 
             }        
         },
@@ -33,9 +33,9 @@ var app = new Vue({
             Tesseract.recognize(img[0])
             .then(function(result){
 //                        alert(result);
-                $data.resultData = result;
+                resultData = result;
             })
-
+            resultData = "mouseEnter";
 
         }
 
