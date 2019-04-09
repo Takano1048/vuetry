@@ -19,7 +19,7 @@ var app = new Vue({
                     .then(function(result){
 //                        alert(result);
                         console.log(result)
-                        vm.resultData =  result.text;
+                        app.resultData =  result.text;
                     })
                     
     
@@ -36,7 +36,7 @@ var app = new Vue({
             .then(function(result){
 //                        alert(result);
                 console.log(result);
-                vm.resultData =  result.text;
+                app.resultData =  result.text;
 
             })
         }
