@@ -10,11 +10,16 @@
             <input type="file" ref="file" v-on:change="onChange"><br><br>
             <img id="img1" v-bind:src="image" accept="image/*" style="border: solid 1px" class="img" v-on:mouseenter="onMouseEnter">
             <br>
-            ▪️読み込み結果
+            ▪️読み込み結果(tesseract)
             <div name="result" style="border: solid 1px">
                 {{resultData}}
             </div>
-        
+
+            ▪️読み込み結果(Google Vision API)
+            <div name="result" style="border: solid 1px">
+                {{resultDataGoogle}}
+            </div>
+            
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="main.js"></script>
