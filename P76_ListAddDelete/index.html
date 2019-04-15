@@ -10,10 +10,11 @@
         <button v-on:click="doAdd">モンスターを追加</button>
         <ul>
             <!-- HPが300より小さいモンスターのみ表示-->
-            <li v-for="item in list" 
+            <li v-for="(item, index) in list" 
                 v-bind:key="item.id">
                 ID.{{ item.id}} {{ item.name }} HP.{{ item.hp }}
                 <button v-on:click="doRemove(index)">モンスターを削除</button>
+                <button v-on:click="doAttack(index)">攻撃する</button>
             </li>
         </ul>
     </div>
