@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Vue.js App</title>
+<link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="doAdd">モンスターを追加</button>
+        <ul>
+            <!-- HPが300より小さいモンスターのみ表示-->
+            <li v-for="item in list" 
+                v-bind:key="item.id">
+                ID.{{ item.id}} {{ item.name }} HP.{{ item.hp }}
+                <button v-on:click="doRemove(index)">モンスターを削除</button>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
