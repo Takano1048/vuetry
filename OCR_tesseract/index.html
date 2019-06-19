@@ -3,27 +3,40 @@
 <head>
     <meta charset="utf-8">
     <title>Vue.js App</title>
-    <link href="main.css" rel="stylesheet"
+    <link href="main.css" rel="stylesheet">
 </head>
 <body>
     <div id="app" >
-            <input type="file" ref="file" v-on:change="onChange"><br><br>
-            <img id="img1" v-bind:src="image" accept="image/*" style="border: solid 1px" class="img" v-on:mouseenter="onMouseEnter">
-            <br>
-            ▪️読み込み結果(tesseract)
-            <div name="result" style="border: solid 1px">
-                {{resultData}}
-            </div>
 
-            ▪️読み込み結果(Google Vision API)
-            <div name="result" style="border: solid 1px">
-                {{resultDataGoogle}}
-            </div>
-            
+        <div contenteditable="true" width="50px" height="50px" style="border:solid 1px;">
+            paste image here
+        </div>
+
+        <img id="outputImage" v-bind:src="image" border="1" width="50%" style="border: solid 1px" class="img" v-on:mouseenter="onMouseEnter">
+
+<!--
+        <textarea id="outputText"></textarea>
+-->
+
+
+
+
+        <br>
+        ▪️読み込み結果(tesseract)
+<!--
+        <div name="result" style="border: solid 1px">
+            {{resultData}}
+        </div>
+-->
+        ▪️読み込み結果(Google Vision API)
+        <div name="result" style="border: solid 1px">
+            {{resultDataGoogle}}
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="main.js"></script>
-    <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>    
+    <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 </body>
 </html>
