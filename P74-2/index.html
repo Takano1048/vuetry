@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>Vue.js App</title>
-    <link href="main.css" rel="stylesheet"
+    <link href="main.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
+        <!-- HPが300より小さいモンスターのみ表示-->
         <li v-for="item in list" 
             v-bind:key="item.id"
             v-if="item.hp < 300">
